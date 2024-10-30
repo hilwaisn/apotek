@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <link th:href="@{/style.css}" rel="stylesheet" />
+  <head>
+    <title>Registrasi</title>
+  </head>
+
+  <body>
+    <h1>Registrasi Akun</h1>
+    <form th:action="@{/save-regis}" method="post">
+      <label>Username :</label>
+      <input type="text" th:field="${regis.username}" />
+      <br />
+      <label>Password :</label>
+      <input type="text" th:field="${regis.password}" /> <br>
+      <button type="submit">Daftar</button>
+      <p>Sudah punya akun? <a th:href="@{login}">Login di sini</a></p>
+    </form>
+  </body>
+</html>

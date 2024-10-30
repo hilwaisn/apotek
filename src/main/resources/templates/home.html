@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <link th:href="@{/style.css}" rel="stylesheet" />
+  <head>
+    <title>Home</title>
+  </head>
+
+  <body>
+    <a th:href="@{add-obat}"><button>Add Obat</button></a>
+    <h1>List Obat</h1>
+    <table>
+      <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Name</th>
+          <th scope="col">Price</th>
+          <th scope="col">Description</th>
+          <th scope="col">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr th:each="obat : ${obat}">
+          <td th:text="${obat.id}"></td>
+          <td th:text="${obat.namaObat}"></td>
+          <td th:text="${obat.price}"></td>
+          <td th:text="${obat.description}"></td>
+          <td>
+            <a th:href="@{/delete-obat/{id}(id=${obat.id})}" class="btn-warning"
+              >Delete</a
+            >
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

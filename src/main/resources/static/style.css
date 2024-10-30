@@ -1,0 +1,156 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #2d3250;
+  margin: auto;
+  min-height: 100vh;
+  margin-top: 30px;
+}
+
+.container {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  width: 300px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.link {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.link a {
+  color: #000;
+  text-decoration: none;
+}
+
+.link a:hover {
+  text-decoration: underline;
+}
+
+h1 {
+  color: #ffffff;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+label {
+  color: #ddd;
+  font-weight: bold;
+  font-size: medium;
+}
+
+input {
+  background-color: #676f9d;
+  color: white;
+  border: none;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  width: 40%;
+  box-sizing: border-box;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+input:focus {
+  background-color: #5a628c;
+  outline: none;
+}
+
+button {
+  background-color: #00aaff;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 10%;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tengah {
+  margin-left: 565px;
+}
+
+p {
+  color: #ffffff;
+  margin-top: 15px;
+}
+
+a {
+  color: #00aaff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #008ecc;
+}
+
+.error {
+  color: red;
+  margin-bottom: 10px;
+}
+
+input,
+button {
+  font-size: 14px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+  color: #ddd;
+}
+
+th {
+  background-color: #333;
+  color: white;
+}
+
+.btn-warning {
+  background-color: #ffc107;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn-warning:hover {
+  background-color: #e0a800;
+}
+
+::placeholder {
+  color: #ddd;
+}

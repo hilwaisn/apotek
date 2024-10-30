@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <link th:href="@{/style.css}" rel="stylesheet" />
+  <head>
+    <title>Add Obat</title>
+  </head>
+
+  <body>
+    <h1>Add Obat</h1>
+    <form th:action="@{/save-obat}" method="post">
+      <label>Name :</label>
+      <input type="text" placeholder="Enter obat name" th:field="${obat.namaObat}" /> <br>
+      <label>Price :</label>
+      <input type="text" placeholder="Enter price" th:field="${obat.price}" /> <br>
+      <label>Description :</label>
+      <input type="text" placeholder="Enter obat description" th:field="${obat.description}" /> <br>
+      <button type="submit">Save</button> <br>
+    </form>
+    <a th:href="@{home}"><button class="tengah">Back to List</button></a>
+  </body>
+</html>
