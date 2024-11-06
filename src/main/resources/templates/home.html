@@ -6,7 +6,7 @@
   </head>
 
   <body>
-    <a th:href="@{add-obat}"><button>Add Obat</button></a>
+    <a th:href="@{add-obat}"><button>Add New Obat</button></a>
     <h1>List Obat</h1>
     <table>
       <thead>
@@ -15,6 +15,9 @@
           <th scope="col">Name</th>
           <th scope="col">Price</th>
           <th scope="col">Description</th>
+          <th scope="col">Category Name</label>
+          <th scope="col">Supplier Name</label>
+          <th scope="col">Supplier Phone</label>
           <th scope="col">Action</th>
         </tr>
       </thead>
@@ -24,13 +27,20 @@
           <td th:text="${obat.namaObat}"></td>
           <td th:text="${obat.price}"></td>
           <td th:text="${obat.description}"></td>
+          <td th:text="${obat.category != null ? obat.category.name : ''} "></td>
+          <td th:text="${obat.supplier != null ? obat.supplier.name : ''} "></td>
+          <td th:text="${obat.supplier != null ? obat.supplier.phone : ''} "></td>
           <td>
+            <a
+              th:href="@{/update-obat/{id}(id=${obat.id})}" class="btn-primary"
+              >Update</a>
             <a th:href="@{/delete-obat/{id}(id=${obat.id})}" class="btn-warning"
-              >Delete</a
-            >
+              >Delete</a>
           </td>
         </tr>
       </tbody>
     </table>
+    <a th:href="@{category}"><button>List Category</button></a>
+    <a th:href="@{supplier}"><button>List Supplier</button></a>
   </body>
 </html>

@@ -14,8 +14,16 @@
       <input type="text" placeholder="Enter price" th:field="${obat.price}" /> <br>
       <label>Description :</label>
       <input type="text" placeholder="Enter obat description" th:field="${obat.description}" /> <br>
-      <button type="submit">Save</button> <br>
+      <label>Category :</label>
+      <select th:field="*{obat.category.id}">
+        <option th:each="category : ${category}" th:value="${category.id}" th:text="${category.name}"></option>
+      </select><br />
+      <label>Supplier :</label>
+      <select th:field="*{obat.supplier.id}">
+        <option th:each="supp : ${supplier}" th:value="${supp.id}" th:text="${supp.name + ' ' + supp.phone}"></option>
+      </select><br />
+      <button type="submit" class="ujung">Save</button> <br>
     </form>
-    <a th:href="@{home}"><button class="tengah">Back to List</button></a>
+    <a th:href="@{home}"><button class="tengah">Back to Obat List</button></a>
   </body>
 </html>

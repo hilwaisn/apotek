@@ -3,7 +3,6 @@ body {
   background-color: #2d3250;
   margin: auto;
   min-height: 100vh;
-  margin-top: 30px;
 }
 
 .container {
@@ -12,10 +11,6 @@ body {
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   width: 300px;
-}
-
-button:hover {
-  background-color: #45a049;
 }
 
 .form-group {
@@ -41,13 +36,13 @@ h1 {
   font-weight: bold;
   text-align: center;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  margin-top: 20px;
 }
 
 form {
   display: flex;
   flex-direction: column;
   margin: auto;
-  justify-content: center;
   align-items: center;
   width: 50%;
 }
@@ -85,12 +80,17 @@ button {
   cursor: pointer;
   width: 10%;
   font-size: 16px;
+  margin: 10px;
   transition: background-color 0.3s ease;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+.ujung {
+  margin-left: 999px;
+}
+
 .tengah {
-  margin-left: 565px;
+  margin-left: 5px;
 }
 
 p {
@@ -108,11 +108,6 @@ a:hover {
   color: #008ecc;
 }
 
-.error {
-  color: red;
-  margin-bottom: 10px;
-}
-
 input,
 button {
   font-size: 14px;
@@ -121,26 +116,34 @@ button {
 table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 20px;
 }
 
 th,
 td {
-  text-align: left;
-  padding: 8px;
+  text-align: center;
+  padding: 5px;
+  margin: 10px;
   border-bottom: 1px solid #ddd;
   color: #ddd;
+  height: 40px; 
+
 }
 
 th {
   background-color: #333;
   color: white;
+  margin: 10px;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 10px;  
 }
 
 .btn-warning {
-  background-color: #ffc107;
+  background-color: red;
   color: white;
-  padding: 8px 12px;
+  padding: 8px 14px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -148,8 +151,31 @@ th {
 }
 
 .btn-warning:hover {
-  background-color: #e0a800;
+  background-color: crimson;
 }
+
+.btn-primary {
+  background-color: #e0a800;
+  color: white;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn-primary:hover {
+  background-color: #e0a813;
+}
+
+form .primary {
+  margin-left: 999px;
+  background-color: #e0a800;
+  text-align: center;
+  color: white;
+  padding: 10px 16px;
+}
+
 
 ::placeholder {
   color: #ddd;
